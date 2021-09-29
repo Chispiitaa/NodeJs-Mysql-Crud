@@ -45,7 +45,7 @@ controller.update = (req, res) => {
   const newUsuario = req.body;
   req.getConnection((err, conn) => {
 
-  conn.query('UPDATE customer set ? where id = ?', [newUsuario, id], (err, rows) => {
+  conn.query('UPDATE usuario set ? where id = ?', [newUsuario, id], (err, rows) => {
     res.redirect('/');
   });
   });
